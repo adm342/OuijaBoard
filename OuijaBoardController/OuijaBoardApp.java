@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class OuijaBoardApp {
     public static void main(String[] args) {
-        String futureString = "Your future is unclear";
-        String moneyString = "You will become rich";
+        String nameString = "My name is Robin";
+        String diedString = "01 13 1900";
         boolean isRunning = true;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Ouija Board\n");
@@ -32,29 +32,29 @@ public class OuijaBoardApp {
                     isQuestionAnswered = true;
                     isRunning = false;
                 }
-                if (question.toLowerCase().contains("future")) {
-                    for (int i = 0; i < futureString.length(); i++) {
-                        System.out.print(futureString.charAt(i));
+                if (question.toLowerCase().contains("name")) {
+                    for (int i = 0; i < nameString.length(); i++) {
+                        System.out.print(nameString.charAt(i));
                         try {
                             Thread.sleep(1000);
                         } catch (InterruptedException ex) {
                             ex.printStackTrace();
                         }
-                        if (i == futureString.length() - 1) {
+                        if (i == nameString.length() - 1) {
                             System.out.println();
                         }
                     }
                     isQuestionAnswered = true;
                 }
-                if (question.contains("money") || question.contains("rich")) {
-                    for (int i = 0; i < moneyString.length(); i++) {
-                        System.out.print(moneyString.charAt(i));
+                if (question.contains("die")) {
+                    for (int i = 0; i < diedString.length(); i++) {
+                        System.out.print(diedString.charAt(i));
                         try {
                             Thread.sleep(1000);
                         } catch (InterruptedException ex) {
                             ex.printStackTrace();
                         }
-                        if (i == moneyString.length() - 1) {
+                        if (i == diedString.length() - 1) {
                             System.out.println();
                         }
                     }
